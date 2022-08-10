@@ -6,4 +6,10 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="DBObjects\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DBObjects\" />
+  </ItemGroup>
 </Project>

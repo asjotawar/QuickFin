@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 
 namespace WebApi.Controllers;
 
@@ -6,6 +7,8 @@ namespace WebApi.Controllers;
 [Route("[controller]")]
 public class WeatherForecastController : ControllerBase
 {
+    private readonly IConfiguration _configuration;
+
     private static readonly string[] Summaries = new[]
     {
         "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
@@ -13,9 +16,11 @@ public class WeatherForecastController : ControllerBase
 
     private readonly ILogger<WeatherForecastController> _logger;
 
-    public WeatherForecastController(ILogger<WeatherForecastController> logger)
+    public WeatherForecastController(ILogger<WeatherForecastController> logger,IConfiguration configuration)
     {
         _logger = logger;
+        _configuration = configuration;
+        var connectionString = _configuration.GetConnectionString("QuickFinCS");
     }
 
     [HttpGet(Name = "GetWeatherForecast")]

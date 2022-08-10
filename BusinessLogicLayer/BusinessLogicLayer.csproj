@@ -9,4 +9,10 @@
   <ItemGroup>
     <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <None Remove="Bll_Classes\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Bll_Classes\" />
+  </ItemGroup>
 </Project>
