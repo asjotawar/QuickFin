@@ -1,0 +1,7 @@
+﻿<Properties StartupConfiguration="{DE96C91C-211E-4AEA-8374-5E24A72DDBAC}|Default">
+  <MonoDevelop.Ide.ItemProperties.DataAccessLayer FirstBuild="True" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.BusinessLogicLayer FirstBuild="True" />
+  <MonoDevelop.Ide.ItemProperties.WebApi PreferredExecutionTarget="/Applications/Microsoft Edge.app" />
+  <MonoDevelop.Ide.ItemProperties.Models FirstBuild="True" />
+</Properties>
