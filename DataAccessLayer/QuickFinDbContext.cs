@@ -4,7 +4,7 @@ using QuickFin.Models;
 
 namespace DataAccessLayer
 {
-    public class QuickFinDbContext : DbContext
+    public partial class QuickFinDbContext : DbContext
     {
         private readonly string _connectionString;
 
@@ -375,10 +375,10 @@ namespace DataAccessLayer
                     .HasForeignKey(d => d.FamilyId);
             });
 
-            //OnModelCreatingPartial(modelBuilder);
+            OnModelCreatingPartial(modelBuilder);
         }
 
-        //partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
+        partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
     }
 }
 

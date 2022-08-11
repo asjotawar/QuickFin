@@ -17,7 +17,7 @@ namespace DataAccessLayer.DAL_Classes
 
         public List<User> GetUsers()
         {
-            return _context.Users.ToList();
+            return _context.Users.Include(a => a.Accounts).ToList();
         }
     }
 }

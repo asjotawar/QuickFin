@@ -15,4 +15,7 @@
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Remove="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" />
+  </ItemGroup>
 </Project>

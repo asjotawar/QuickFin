@@ -11,6 +11,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Remove="Bll_Classes\" />
+    <None Remove="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Bll_Classes\" />
