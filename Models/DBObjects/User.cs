@@ -14,9 +14,9 @@ namespace QuickFin.Models
         public long Id { get; set; }
         public long? FamilyId { get; set; }
         public string? FullName { get; set; }
-        public byte[]? EmailId { get; set; }
-        public byte[]? CreatedAt { get; set; }
-        public byte[]? Password { get; set; }
+        public string? EmailId { get; set; }
+        public DateTime? CreatedAt { get; set; }
+        public string? Password { get; set; }
 
         public virtual Family? Family { get; set; }
         public virtual ICollection<Account> Accounts { get; set; }

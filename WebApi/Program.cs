@@ -12,9 +12,6 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddControllers().AddJsonOptions(x =>
                 x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
 
-builder.Services.AddRazorPages()
-    .AddRazorRuntimeCompilation();
-
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

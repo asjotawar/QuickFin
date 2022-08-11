@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using QuickFin.Models;
 using Microsoft.Extensions.Configuration;
+using DataAccessLayer.DAL_Classes;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -27,10 +28,24 @@ public class UserController : Controller
     }
 
     // GET: /<controller>/
-    [HttpGet(Name = "GetUsers")]
+    [HttpGet("GetAllUsers")]
     public IEnumerable<User> Index()
     {
         return User_BLL.GetUsers();
+    }
+    //GET: /<controller>/
+    [HttpGet("GetUserDetails")]
+    public ActionResult<User> GetUser([FromQuery]User user)
+    {
+        var userDetails = User_BLL.GetUser(user.FullName);
+        if(userDetails != null && user.Password == userDetails.Password)
+        {
+            return userDetails;
+        }
+        else
+        {
+            return NotFound();
+        }
     }
 }
 

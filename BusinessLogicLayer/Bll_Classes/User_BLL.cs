@@ -1,5 +1,6 @@
 ﻿using System;
 using DataAccessLayer.DAL_Classes;
+using Microsoft.EntityFrameworkCore;
 using QuickFin.Models;
 
 namespace BusinessLogicLayer.Bll_Classes
@@ -20,6 +21,10 @@ namespace BusinessLogicLayer.Bll_Classes
             return user_DAL.GetUsers();
         }
 
+        public User GetUser(string fullName)
+        {
+            return user_DAL.GetUser(fullName);
+        }
     }
 }
 
